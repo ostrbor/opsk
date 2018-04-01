@@ -9,12 +9,12 @@ Coord = namedtuple('Coord', ['latitude', 'longitude'])
 Result = namedtuple('Result', ['latitude', 'longitude', 'callsign'])
 
 
-def get_approximate_state_vectors(latitude_min_max: Tuple[int, int],
+def get_approximate_state_vectors(states: List[StateVector],
+                                  latitude_min_max: Tuple[int, int],
                                   longitude_min_max: Tuple[int, int]) -> List[StateVector]:
     '''
     To extract StateVectors from OpenSky about planes by LatLon limits.
     '''
-    states = api.get_states().states
     res = []
     for s in states:
         if s.latitude and s.longitude:
@@ -43,9 +43,11 @@ def filter_by_radius(radius_km: int, from_coord: Coord,
 
 if __name__ == '__main__':
     # Get approximated results
+    states = api.get_states().states
     latitude_min_max = (38, 58)
     longitude_min_max = (-8, 12)
-    vectors = get_approximate_state_vectors(latitude_min_max=latitude_min_max,
+    vectors = get_approximate_state_vectors(states,
+                                            latitude_min_max=latitude_min_max,
                                             longitude_min_max=longitude_min_max)
     # Get accurate results
     paris = Coord(latitude=48.864716, longitude=2.349014)

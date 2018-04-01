@@ -13,6 +13,7 @@ setup(
     author_email='',
     description='',
     install_requires=[
+        'requests',
         'geopy',
     ],
 )

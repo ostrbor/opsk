@@ -8,7 +8,6 @@ To run container:
 docker run -it --rm ops
 ```
 
-
 To test:
 ```bash
 pytest test.py

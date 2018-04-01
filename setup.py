@@ -15,5 +15,4 @@ setup(
     install_requires=[
         'geopy',
     ],
-    dependency_links=['git+https://github.com/openskynetwork/opensky-api.git#egg=python'],
 )

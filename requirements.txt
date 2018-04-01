@@ -1,0 +1,7 @@
+certifi==2018.1.18
+chardet==3.0.4
+geopy==1.12.0
+idna==2.6
+-e git+https://github.com/openskynetwork/opensky-api.git@960cc9c83a3ef27845eb57b3b260020dcd9a9f8f#egg=opensky_api&subdirectory=python
+requests==2.18.4
+urllib3==1.22

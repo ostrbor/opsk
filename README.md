@@ -1,4 +1,4 @@
-To build docker container:
+To build docker image:
 ```bash
 docker build -t ops .
 ```

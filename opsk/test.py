@@ -1,4 +1,4 @@
-from main import get_approximate_state_vectors, Coord, filter_by_radius, Result
+from opsk.main import get_approximate_state_vectors, Coord, filter_by_radius, Result
 
 
 def test_get_approximate_state_vectors():

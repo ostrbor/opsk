@@ -12,7 +12,7 @@ def test_get_approximate_state_vectors():
 
 
 def test_filter_by_radius():
-    radius = 100
+    radius = 100  # 1 degree is equal to approximately 100 km
     from_coord = Coord(1, 1)
     to_coords = [Result(1, 1, 'a'), Result(4, 4, 'b'), Result(1.5, 1.5, 'c')]
     res = filter_by_radius(radius, from_coord, to_coords)

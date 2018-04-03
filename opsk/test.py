@@ -21,4 +21,4 @@ def test_filter_by_radius():
     to_coords = expected + wrong_coord
     res = filter_by_radius(radius, from_coord, to_coords)
     assert len(res) == 2
-    assert res == expected
+    assert sorted(res) == sorted(expected)
